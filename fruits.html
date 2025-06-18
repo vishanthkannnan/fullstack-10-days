@@ -3,12 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <title>Fruit Price Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    img {
+      border-radius: 8px;
+    }
+
+    form {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      width: 400px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+  </style>
 </head>
 <body>
 
   <h2>Fruit Price Table</h2>
 
-  <table border="1">
+  <table>
     <tr>
       <th rowspan="2">Fruit</th>
       <th rowspan="2">Image</th>
@@ -52,6 +112,23 @@
       </td>
     </tr>
   </table>
+
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="fruits">Select Fruit</label>
+    <select id="fruits">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="orange">Orange</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="quantity">
+      I want more than 1 quantity
+    </label>
+  </form>
 
 </body>
 </html>
