@@ -1,29 +1,34 @@
-import { useState } from 'react'
+// src/App.jsx
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
-import Welcome from './Welcome'
-import Skills from './skills' 
-import { Routes,Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Services from './pages/Service'
-import About from './pages/About'
+import Home from "./Pages/Home";
+import Skills from "./Skills";
+import Contact from "./Pages/Contact";
+import Faq from "./Pages/Faq";
+import About from "./Pages/About";
 
-//import './App.css'
-
+import Form from "./Pages/Hooks/Form";
+import State from "./Pages/Hooks/State";
+import Effect from "./Pages/Hooks/Effect";
 
 function App() {
-
   return (
     <>
-    <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/services' element={<Service/>} />
-      <Route path='/about' element={<About/>} />
-   
-    </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/skills" element={<Skills skill={["Mano","Tharani","sridhar"]} />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/about" element={<About />} />
 
-      
+        <Route path="/hooks/form" element={<Form />} />
+        <Route path="/hooks/State" element={<State />} />
+        <Route path="/hooks/Effect" element={<Effect />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

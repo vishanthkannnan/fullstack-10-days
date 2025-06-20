@@ -4,12 +4,10 @@ const Welcome = (props) => {
   return (
     <div>
         
-        <p> {props.name} from {props.country}</p>
+        <p>Enjoy building your application!  {props.name}</p>
     </div>
   )
 }
 
 export default Welcome
 
-
-  
