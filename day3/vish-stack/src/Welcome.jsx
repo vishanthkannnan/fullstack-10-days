@@ -4,7 +4,7 @@ const Welcome = (props) => {
   return (
     <div>
         
-        <p>we do we compete !  {props.name}</p>
+        <p> {props.name} from {props.country}</p>
     </div>
   )
 }
