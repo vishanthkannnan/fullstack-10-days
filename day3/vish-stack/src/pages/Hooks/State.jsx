@@ -1,20 +1,24 @@
-// src/Pages/Hooks/State.jsx
-import { useState } from "react";
+import {useState} from 'react'
 
-const State = () => {
-  const [name, setName] = useState("Vishanth");
 
+const state = () => {
+    const [count, setCount] = useState(0);
+    const [name,setlike] = useState("😁");
   return (
-    <div className="p-4 border border-gray-200 rounded">
-      <h1 className="text-2xl font-bold mb-2">Hello {name}</h1>
-      <button 
-        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-        onClick={() => setName("Vish")}
-      >
-        Change Name
-      </button>
+    <>
+    
+    <div>
+        <h2>Count:{count}</h2>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <button onClick={() => setCount(count - 1)}>Decrement</button>
     </div>
-  );
-};
+    <div>
+        <h2>Like: {name}</h2>
+        <button onClick={() => setlike("👍")}>Like</button>
+        <button onClick={() => setlike("👎")}>Dislike</button>
+    </div>
+    </>
+  )
+}
+export default state
 
-export default State;
