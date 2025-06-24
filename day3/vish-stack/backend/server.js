@@ -11,8 +11,7 @@ app.get('/get', async (req, res) => {
   const user = await User.find()
   res.json(user);
 })
-
-
+// to commit;
 
 app.listen(4000, () => {
   console.log('Server is running on http://localhost:4000');
