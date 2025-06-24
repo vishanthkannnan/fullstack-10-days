@@ -1,0 +1,149 @@
+.not-found-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.not-found-content {
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+.not-found-illustration {
+  margin-bottom: 40px;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+.error-books {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.not-found-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.not-found-text p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.not-found-suggestions {
+  max-width: 800px;
+  width: 100%;
+}
+
+.not-found-suggestions h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.suggestion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 30px 20px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.suggestion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.suggestion-icon {
+  font-size: 2rem;
+}
+
+.suggestion-card span:last-child {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .error-books {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  .not-found-text h1 {
+    font-size: 2rem;
+  }
+
+  .not-found-text p {
+    font-size: 1rem;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .not-found-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .suggestion-card {
+    padding: 20px 16px;
+  }
+}
