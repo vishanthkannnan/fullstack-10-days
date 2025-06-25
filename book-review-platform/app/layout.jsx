@@ -21,12 +21,17 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <div className="video-background">
+          <video autoPlay muted loop playsInline>
+            <source src="/book.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="overlay"></div>
+        </div>
         <AuthProvider>
-          <div className="App">
-            <Header />
-            <main className="main-content">{children}</main>
-            <Footer />
-          </div>
+          <Header />
+          <main className="main-content">{children}</main>
+          <Footer />
         </AuthProvider>
       </body>
     </html>

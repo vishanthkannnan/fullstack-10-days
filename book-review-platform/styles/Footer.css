@@ -1,5 +1,5 @@
 .footer {
-  background: var(--surface-color);
+  background: transparent;
   border-top: 1px solid var(--border-color);
   margin-top: 80px;
 }

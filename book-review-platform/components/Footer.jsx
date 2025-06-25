@@ -42,7 +42,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 BookReview Platform. Made with ❤️ and React.js</p>
+          <p>&copy; 2005 BookReview Platform. made by vishhh.pvt.lts</p>
         </div>
       </div>
     </footer>

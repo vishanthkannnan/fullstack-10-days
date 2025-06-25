@@ -51,9 +51,9 @@ function ModernLoginForm() {
     <div className="login-bg-gradient" style={{ minHeight: '100vh', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}>
         <h1 style={{ textAlign: 'center', color: '#2d2d4d', fontWeight: 800, fontSize: '2.3rem', marginBottom: 8, letterSpacing: 0.5 }}>Welcome Back</h1>
-        <p style={{ textAlign: 'center', color: '#7f53ac', fontSize: '1.1rem', marginBottom: 32, opacity: 0.85 }}>Sign in to your account to continue</p>
+        <p style={{ textAlign: 'center', color: '#7f53ac', fontSize: '1.1rem', marginBottom: 32, opacity: 0.85 }}>Sign in to continue your Bookreview</p>
         <div className="glass-card login-container-react" style={{ margin: 0 }}>
-          <h2 style={{ marginBottom: 18 }}>Sign In</h2>
+          <h2 style={{ marginBottom: 18 }}>Login</h2>
           <form className={`login-form${shake ? " shake" : ""}`} autoComplete="off" onSubmit={handleLogin}>
             <div className="input-group floating-label">
               <input
