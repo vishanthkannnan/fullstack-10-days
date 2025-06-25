@@ -2,6 +2,8 @@ import { connectDB } from './db.js';
 import express from 'express';
 import User from './model/user.js';
 import  cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config(); // Load environment variables from .env file
 const app = express();           
 
 app.use(cors());
@@ -54,4 +56,3 @@ app.put('/put/:id', async (req, res) => {
 app.listen(4000, () => {
   console.log('Server is running at http://localhost:4000');
 }); 
-
