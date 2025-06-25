@@ -1,16 +1,31 @@
-import Effects from "./Hooks/Effects";
-import Reducer from "./Hooks/Reducer";
-import State from "./Hooks/State";
-const About = () => {
-  return (
-    <div>
-      <h1>About Page</h1>
-      {/* <State />
-      <Effects /> */}
-      <Reducer />
-      
-    </div>
-  )
-}
+import State from "../hooks/State"
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../hooks/UserContext";
+import { InfoContext } from "../hooks/InfoContext"; 
+import Reducer from "../hooks/Reducer";
 
-export default About
+const About = () => {
+
+    const name= useContext(InfoContext);
+    const products =useContext(UserContext);
+    return (
+        <div>
+            <h1>About Page</h1>
+            <h2>Welcome, {name}!</h2>
+            <ul>
+                {products.map((product) => (
+                    <li key={product.id}>
+                        {product.name} - ${product.price}
+                    </li>
+                ))}
+            </ul>
+            <p>This is a simple about page.</p>
+            <Link to='/state'>UserState Example</Link><br/>
+            <Link to='/form'>ControlledForm</Link><br/>
+            <Link to='/effect'>UseEffect Example</Link><br/>
+            <Link to='/reducer'>UseReducer Example</Link>
+        </div>
+    )
+}
+export default About;

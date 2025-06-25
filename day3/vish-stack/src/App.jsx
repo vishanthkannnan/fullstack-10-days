@@ -1,36 +1,33 @@
-import Skills from './Skills'
-import Home from './Pages/Home'
-import Contact from './Pages/Contact'
-import Faq from './Pages/Faq' 
-import { Route, Routes } from 'react-router-dom'
-import About from './Pages/About'
-import Navbar from './components/Navbar'
-import Form from './Pages/Hooks/Form'
-import State from './Pages/Hooks/State'
-import Effects from './Pages/Hooks/Effects'
-import Reducer from './Pages/Hooks/Reducer'
-import ExReducer from './Pages/Hooks/ExReducer'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Faq from './pages/Faq';
+import State from './hooks/State';
+import Form from './hooks/Form';
+import Effect from './hooks/Effect';
+import Navbar from './components/Navbar';
+import Reducer from './hooks/Reducer';
 
 function App() {
-
   return (
     <>
-    <Navbar/>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/skills" element={<Skills skill={["Mano","Tharani","sridhar"]} />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/faq" element={<Faq />} />
-      <Route path="/about" element={<About/>} />
-      <Route path="/hooks/effects" element={<Effects />} />
-      <Route path="/hooks/form" element={<Form />} />
-      <Route path="/hooks/state" element={<State />} />
-      <Route path="/hooks/reducer" element={<Reducer/>}/>
-      <Route path="/hooks/ExReducer" element={<ExReducer/>}/>
-    </Routes>
-      
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/faq' element={<Faq />} />
+        <Route path='/state' element={<State />} />
+        <Route path='/form' element={<Form />} />
+        <Route path='/effect' element={<Effect />} />
+        <Route path='/reducer' element={<Reducer />} />
+        <Route path='*' element={<h2>404 Page Not Found</h2>} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

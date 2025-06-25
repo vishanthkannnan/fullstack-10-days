@@ -1,23 +1,20 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
+.navbar{
     background-color: aquamarine;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
     font-size: xx-large;
-    padding: 10px; x
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: georgia;
 }
-
-.navbar li a {
+.navbar li a{
     text-decoration: none;
     color: black;
 }
 
-.navbar li a:hover {
+.navbar li a:hover{
     color: brown;
     text-decoration: underline;
 }
-
-li {
+li{
     list-style: none;
 }
-

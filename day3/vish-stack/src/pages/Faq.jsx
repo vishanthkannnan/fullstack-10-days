@@ -1,11 +1,8 @@
-import React from 'react'
-
 const Faq = () => {
-  return (
-    <div>
-      <h1>Faq Page</h1>
-    </div>
-  )
+    return (
+        <div>
+            <h1>FAQ Page</h1>
+        </div>
+    )
 }
-
-export default Faq
+export default Faq;
